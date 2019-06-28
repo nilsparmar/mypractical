@@ -1,0 +1,39 @@
+from datetime import datetime
+
+print("Current DateTime:",datetime.now())
+
+
+from datetime import datetime
+
+delta = datetime.now() - datetime(1992, 11, 30)
+
+print("Days=",delta.days)
+print("Seconds=",delta.seconds)
+
+print(dir(datetime))
+
+now = datetime.now()
+print(now)
+
+then = datetime(1992, 11, 30, 20, 20, 20, 202020)
+print(then)
+
+print(then-now)
+
+whenever = datetime.strptime("1992-11-30", "%Y-%m-%d")
+print(whenever.date()) #only date
+print(whenever.strftime('%Y')) #return Year only
+print(whenever.strftime('%m')) #return month only
+print(whenever.strftime('%d')) #return day only
+print(whenever.strftime('%B')) #return Month in Word only
+print(whenever.strftime('%h')) #return Month in abbriavt only
+print(whenever.strftime('%H %M %S')) #return month only
+print(whenever.strftime('%A')) #return weekday 
+
+justnow = datetime.strptime("1992:11:30:20:20:20","%Y:%m:%d:%H:%M:%S")
+print(justnow)
+
+print(justnow.month)
+print(justnow.year)
+print(justnow.minute)
+print(justnow.microsecond)
